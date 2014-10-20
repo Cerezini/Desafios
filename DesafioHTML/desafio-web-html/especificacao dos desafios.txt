@@ -1,0 +1,40 @@
+validem todo o html no http://validator.w3.org/
+
+desafio 1 - easy
+
+HTML 4.01
+
+Ignorando tudo que estiver acima da barra laranja e partindo dos menus, tornar toda a página um código html semântico.
+
+1 - todos os links que forem adicionados devem ter "#" no href;
+2 - a aba visível deve ser a única implementada, as outras devem ser tratadas como abas ocas;
+3 - deve ser implementado o footer;
+4 - NÃO deve ser adicionado estilo ou qualquer tipo de formatação, a não ser a própria padrão do navegador.
+
+
+
+
+
+
+
+desafio 2 - normal
+
+XHTML 1.0 strict
+
+Essa tela deve ser traduzida para um modelo web e deve ser implementada semanticamente.
+
+1 - analise se todos os elementos precisam estar na web;
+2 - simplifique algum tipo de controle, caso seja necessário, para facilitar a usabilidade na web;
+3 - implemente a idéia em HTML semântico.
+
+
+
+
+
+desafio 3 - hard
+
+HTML 5
+
+O exemplo deve ser transformado em HTML usando a melhor tag HTMl 5 para cada parte.
+
+- usar idéia de html semântico e analisar a rigidez da semântica.

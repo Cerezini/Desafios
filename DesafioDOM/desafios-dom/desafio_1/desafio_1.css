@@ -1,0 +1,97 @@
+html
+{
+	background: #fff;
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	padding: 10px;
+	margin: 0 auto;
+	width: 900px;
+	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;
+	background:#efefef;
+	font-family: Sans-serif, Verdana, Courier;
+}
+#desafio, #desafio p
+{
+	margin: 0;
+	padding: 3px 5px 10px 5px;
+	-webkit-border-radius: 5px;
+	background: #4E6F9E;
+	color: #fff;
+}
+#desafio code
+{
+	background: #888;
+	-webkit-border-radius:3px;
+	padding:0 3px;
+}
+#info
+{
+	margin: 2px 40px;
+	background: #ccc;
+}
+#info div
+{
+	margin: 5px;
+	background: #eee;
+	color: #334;
+}
+p
+{
+	color: #334;
+}
+blockquote
+{
+	font-style: italic;
+	font-size: 0.9em;
+}
+table
+{
+	border: 1px solid #ccc;
+	margin: 0 auto;
+}
+caption
+{
+	caption-side: bottom;
+	font-size: 0.7em;
+	color: #777;
+}
+thead
+{
+	background: #333;
+	color: #fff;
+	font-size: 0.9em;
+}
+th
+{
+	padding: 2px 3px;
+}
+tbody tr
+{
+	background: #fff;
+	text-align: center;
+}
+tbody td
+{
+	padding: 2px 5px;
+}
+tfoot tr
+{
+	background: #ccc;
+}
+tfoot td
+{
+	text-align: right;
+	padding-right: 5px;
+}
+
+address
+{
+	margin: 30px 0 0 0;
+	font-size: 0.8em;
+	color: #555;
+	text-align: center;
+}

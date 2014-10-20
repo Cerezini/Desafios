@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt-BR">
+	<link rel="stylesheet" href="desafio_1.css" type="text/css">
+   	<title>Manipulação do DOM </title>
+   	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+   
+   	<div id="desafio">
+	   	<h3>Coletador de Informação</h3>
+	   	<p>
+	   		Navegue pelo documento utilizando o <acronym title="Document Obect Model">DOM</acronym> e consiga as informações da lista abaixo.<br>
+	   		Adicione as informações na <code>&lt;div id="info"&gt;</code> abaixo. Para cada item, adicione uma outra div contendo o resultado.
+	   	</p>
+	   	<ol>
+	   		<li>Recupere o citador do bloco que inicia com "O futuro...".
+	   		<li>Recupere a data da inserção e deleção de conteúdo do segundo parágrafo do texto separados por espaço.
+	   		<li>Recupere o autor da frase <q lang="en">A Semantic Web is not Artificial Intelligence</q> e a língua da frase separados por espaço.
+	   		<li>Recupere sobre o que se refere a tabela abaixo.
+	   		<li>Recupere o diretor do evento "WASPI".
+	   	</ol>
+	   	<div id="info"></div>
+   	</div>
+	<h1><abbr title="HyperText Markup Language">HTML</abbr></h1>
+	<p>
+		O <abbr title="HyperText Markup Language">HTML</abbr> é uma linguagem de marcação textual usada para escrever documentos que possuem 
+		conexões com outros documentos e que podem ser transmitidos pela rede <acronym title="World Wide Web">WWW</acronym>.<br>
+		Como dito pelo próprio <cite>Tim Berners-Lee</cite>: <q lang="en-US" title="citado por Tim Berners-Lee">A Semantic Web is not Artificial Intelligence</q>.<br>
+		Porém, na junção das ontologias que existem e que existirão com o tempo, poderemos usufruir de respostas mais precisas para as busca que serão feitas.
+	</p>
+	<p>
+		O <abbr title="HyperText Markup Language">HTML</abbr> deverá ser usado para ligar os significados aos conteúdos da web.
+		<del datetime="2009-10-02T12:23:10">Talvez devesse ser substituído por uma abordagem mais concreta, mais flexível e 
+		mais simples de trabalhar.</del> <ins datetime="2009-10-02T12:25:00" cite="http://www.html5.org">Talvez devesse ser aprimorado para um modelo mais robusto</ins>.
+	</p>
+	<blockquote cite="http://www.google.com" title="Retirado de algum lugar em http://www.google.com">
+		<p>
+			O futuro é daqueles que um dia do passado acreditaram que o amanhã se constrói com o passar do tempo.<br>
+			E é, exatamente a partir de tal propósito, que se atinge um limite maior que o esperado pelo determinismo alheio.
+		</p>
+	</blockquote>
+	<p> Abaixo a relação de eventos para discussão do assunto:</p>
+	<table id="t1" summary="Tabela com a relação de eventos realizados
+					e os tópicos abordados em cada um deles.">
+		<caption> Eventos Web Semântica + <abbr title="HyperText Markup Language">HTML</abbr></caption>
+		<thead>
+			<tr>
+				<th></th>
+				<th id="t1_b" abbr="Data" axis="data">Realizado Em</th>
+				<th id="t1_c" abbr="tópico" axis="topico">Tópico Abordado</th>
+				<th id="t1_d" abbr="diretor" axis="diretor">Diretor</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th id="t1_f1" axis="total">TOTAL</th><td headers="t1_f1" colspan="3">3</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<th id="t1_1" abbr="W3CI" axis="W3CI"><abbr title="World Wide Web Consortium I">W3CI</abbr></th>
+				<td headers="t1_b t1_1">1996-10-02</td>
+				<td headers="t1_c t1_1">Padronizações para normalização de plataforma</td>
+				<td headers="t1_d t1_1">Tim Berners-Lee</td>
+			</tr>
+			<tr>
+				<th id="t1_2" abbr="S&amp;W" axis="semantics_and_web">Semantics and Web</th>
+				<td headers="t1_b t1_2">2000-02-02</td>
+				<td headers="t1_c t1_2"><span lang="en">Hyperlinks</span> em <dfn title="estudo da abstração da realidade humana em modelos conceituais">ontologias</dfn></td>
+				<td headers="t1_d t1_2">Ludwig Van Beethoven</td>
+			</tr>
+			<tr>
+				<th id="t1_3" abbr="WASPI" axis="WASPI"><abbr title="Web Standards Project I">WASPI</abbr></th>
+				<td headers="t1_b t1_3">2001-10-23</td>
+				<td headers="t1_c t1_3">Regras ao desenvolver para web</td>
+				<td headers="t1_d t1_3">The Acid Guy</td>
+			</tr>
+		</tbody>
+	</table>
+	<address>
+		Para entrar em contato utilize: <a href="mailto:web@email.com">web@email.com</a>
+	</address>
+<script type="text/javascript">
+	addListener = function (node, type, handler) {
+		if (node.addEventListener) {
+			node.addEventListener(type, handler, false);
+		} else if (node.attachEvent) {
+			node.attachEvent("on"+type, handler);
+		} else {
+			node["on"+type] = handler;
+		}
+	}
+
+
+	var checkAnswers = (function () {
+		var lista = document.getElementsByTagName("ol")[0].getElementsByTagName("li"),
+			resps = document.getElementById("info").getElementsByTagName("div"),
+			mark  = (function (i) {
+					lista[i].setAttribute("style", "text-decoration: line-through; color: #242");
+				}),
+			check = function(){
+						var checked = [];
+						if (resps.length && (resps[0].firstChild.nodeValue === "http://www.google.com")) {
+							checked[checked.length] = 0;
+						}
+						if (resps[1] && (resps[1].firstChild.nodeValue === 
+							(document.getElementsByTagName("ins")[0].getAttribute("datetime")+" "+document.getElementsByTagName("ins")[0].getAttribute("datetime")))) {
+							checked[checked.length] = 1;
+						}
+						if (resps[2] && (resps[2].firstChild.nodeValue === "Tim Berners-Lee en-US")) {
+							checked[checked.length] = 2;
+						}
+						if (resps[3] && (resps[3].firstChild.nodeValue === document.getElementById("t1").getAttribute("summary"))) {
+							checked[checked.length] = 3;
+						}
+						if (resps[4] && (resps[4].firstChild.nodeValue === "The Acid Guy")) {
+							checked[checked.length] = 4;
+						} 
+						
+						return checked;
+					};
+			return (function () {
+				var i,
+					arrOk = check();
+					console.log(arrOk);
+					for (i = 0; i < arrOk.length; i++) {
+						mark(arrOk[i]);
+					}
+					return true;
+			});
+		});
+</script>
+<script src="desafio_1.js" type="text/javascript"></script>

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt-BR">
+    <link rel="stylesheet" href="desafio_2.css" type="text/css">
+    <title>Eventos Simples</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+   
+    <div id="desafio">
+        <h3>Abas e Piscadores =]</h3>
+        <p>Adicione eventos nas abas para que elas manipulem os conteúdos.<br>
+        Os eventos devem ser adicionados diretamente nos <code>&lt;a&gt;</code> da navegação
+        Dentro de <code>&lt;div id="info"&gt;</code> existem links com cores. Eles devem fazer a <code>&lt;div id="colortest"&gt;</code> piscar ao serem clicados.
+        </p>
+    </div>
+    <h1>Site Eventivo</h1>
+    <ul id="tabs">
+        <li class="selected"><a href="informacoes.html">Informações</a>
+        <li><a href="correcoes.html">Correções</a>
+        <li><a href="atualizacoes.html">Atualizações</a>
+    </ul>
+    <div id="content">
+        <div id="info" class="intop">
+            Para identificar o tipo de informações contidas nessa páginas, utilizou-se um código de cor como o a seguir: <span>clique para ver a cor desejada</span><br>
+            <div id="colortest">teste de cor</div> 
+            <ul>
+                <li><a href="#">warning</a>
+                <li><a href="#">recommended</a>
+                <li><a href="#">deprecated</a>
+            </ul>
+        </div>
+        <div id="bugfix" class="sheet">
+            <h2>Correções</h2>
+            <p>
+                Foram corrigidos vários bugs no controle de tarefas do sistema. Para se manter feliz, faça o update da <a href="atualizacoes.html">última versão</a>.<br>
+            </p>
+            <div>
+                Alguns métodos foram marcados com obsoletos:
+                <ul>
+                    <li><code class="deprecated">getEverybodyBySenselessTarget()</code>
+                    <li><code class="deprecated">withoutAnyReasonRepeatEverything()</code>
+                </ul>
+                E alguns métodos novos agora devem ser usados:
+                <ul>
+                    <li><code class="recommended">chuckNorrisPleaseMakeItWork()</code>
+                    <li><code class="recommended">parseEverythingWithChuckNorris()</code>
+                    <li><code class="recommended">neverFailWhileChuckNorris()</code>
+                </ul>
+            </div>
+            
+        </div>
+        <div id="update" class="sheet">
+            <h4>Última Versão</h4>
+            <p>
+            <a href="file.tar.gz">versão 3.0.1.23</a>
+            </p>
+            <h4>Versões Anteriores</h4>
+            <ul>
+                <li><a href="#">3.0.0.56</a>
+                <li><a href="#">3.0.0.12</a>
+                <li><a href="#">2.9.9.98</a> <span class="warning">Versão instável</span>
+                <li><a href="#">2.9.8.12</a>
+            </ul>
+        </div>
+    </div>
+    <address>
+        Para entrar em contato utilize: <a href="mailto:web@email.com">web@email.com</a>
+    </address>
+<script src="desafio_2.js" type="text/javascript"></script>
