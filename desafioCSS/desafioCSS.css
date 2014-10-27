@@ -1,0 +1,30 @@
+body > * {
+	display: block;
+	clear: both;
+}
+
+#header, #header * {
+	float: left;
+	position: relative;
+}
+
+#login {
+	float: right;
+	position: relative;
+}
+
+#menu > ul > li {
+	float: left;
+}
+
+#content {
+	float: left;
+	position: relative;
+	width: 80%;
+}
+
+#adv {
+	float: right;
+	position: relative;
+	width: 20%;
+}

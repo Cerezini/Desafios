@@ -1,0 +1,10 @@
+Regras:
+
+Os únicos elementos que podem ser inseridos no HTML são "span" e "div".
+O estilo deve ser inserido na pagina pela tag "link".
+No fim das mudanças, seu html deve ser validado na W3C sem nenhum erro:
+	- http://validator.w3.org/check
+	- use upload file
+	
+login e adv devem ser 1/5 do conteudo tamanho total.
+o resto é a critério
