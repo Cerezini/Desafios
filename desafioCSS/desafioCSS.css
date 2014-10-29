@@ -11,10 +11,49 @@ body > * {
 #login {
 	float: right;
 	position: relative;
+	width: 20%;
+}
+
+#login > form input {
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+#menu {
+	padding-top: 20px;
+}
+
+#menu ul {
+	list-style: none;
+}
+
+#menu a{
+	text-decoration: none;
+	padding: 5px;
+	display: block;
+}
+
+#menu li > ul{
+	display: none;
+}
+
+#menu ul li:hover ul {
+	position: absolute;
+	display: block;
+	background: #ffffff;
+	width: 230px;
+	padding: 10px 10px 0 10px;
+	margin-top: -4px;
+	box-shadow: -6px 0 5px -5px rgba(0, 0, 0, 0.2), -2px 2px 2px 0 rgba(0, 0, 0, 0.1), 2px 3px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+#menu ul li:hover ul a:hover {
+	display: block;
 }
 
 #menu > ul > li {
 	float: left;
+	position: relative;
 }
 
 #content {
@@ -27,4 +66,9 @@ body > * {
 	float: right;
 	position: relative;
 	width: 20%;
+}
+
+#footer {
+	text-align: center;
+	padding-top: 30px;
 }
